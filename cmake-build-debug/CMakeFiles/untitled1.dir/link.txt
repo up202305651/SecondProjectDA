@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/untitled1.dir/link.d CMakeFiles/untitled1.dir/main.cpp.o CMakeFiles/untitled1.dir/reader.cpp.o CMakeFiles/untitled1.dir/bruteforce.cpp.o CMakeFiles/untitled1.dir/greedy.cpp.o CMakeFiles/untitled1.dir/dynamic_prog.cpp.o -o untitled1

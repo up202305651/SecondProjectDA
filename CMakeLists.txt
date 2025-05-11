@@ -9,4 +9,6 @@ add_executable(untitled1 main.cpp
         bruteforce.h
         greedy.cpp
         greedy.h
+        dynamic_prog.cpp
+        dynamic_prog.h
 )
