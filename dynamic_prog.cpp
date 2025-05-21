@@ -7,8 +7,31 @@
 
 using namespace std;
 
-// Time complexity: O(n * W)
-// Space complexity: O(n * W) for the dp table
+/**
+ * @brief Solves the 0/1 Knapsack Problem using dynamic programming approach
+ *
+ * This function implements a bottom-up dynamic programming solution to the Delivery
+ * Truck Pallet Packing Optimization Problem, which is a variation of the 0/1 Knapsack Problem.
+ * The algorithm creates a 2D table where dp[i][w] represents the maximum profit that can be obtained
+ * with the first i pallets and a weight capacity of w.
+ *
+ * For each pallet i and capacity w, the algorithm decides whether to include the pallet in the solution
+ * by comparing:
+ * 1. The profit from not including the pallet (dp[i-1][w])
+ * 2. The profit from including the pallet (dp[i-1][w-wt] + pf)
+ *
+ * After building the table, the algorithm traces back the selected pallets and outputs
+ * the total profit, total weight, and the IDs of the selected pallets.
+ *
+ * @param data A struct containing problem parameters such as the number of pallets and truck capacity
+ * @param pallets A vector of Pallet objects, each with an ID, weight, and profit
+ *
+ * @note Time Complexity: O(n * W) where n is the number of pallets and W is the truck capacity
+ * @note Space Complexity: O(n * W) for the dynamic programming table
+ *
+ * @see Pallet
+ * @see Data
+ */
 
 void dynamicProgramming(Data& data, vector<Pallet>& pallets) {
     int n = data.n_pallets;

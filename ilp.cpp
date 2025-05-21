@@ -6,6 +6,37 @@
 
 using namespace std;
 
+/**
+ * @brief Solves the 0/1 Knapsack Problem using Integer Linear Programming (ILP)
+ *
+ * This function implements an Integer Linear Programming solution to the Delivery
+ * Truck Pallet Packing Optimization Problem using the GNU Linear Programming Kit (GLPK).
+ *
+ * The problem is formulated as:
+ * - Maximize: \sum_{i=1}^{n} profit_i * x_i
+ * - Subject to: \sum_{i=1}^{n} weight_i * x_i <= capacity
+ * - Where x_i is a binary variable indicating whether pallet i is selected (1) or not (0)
+ *
+ * The implementation follows these steps:
+ * 1. Create an ILP problem instance
+ * 2. Define decision variables (one binary variable per pallet)
+ * 3. Set the objective function (maximize total profit)
+ * 4. Add the capacity constraint
+ * 5. Solve the ILP problem using GLPK
+ * 6. Extract and display the solution
+ *
+ * @param data A const reference to the Data struct containing problem parameters such as truck capacity
+ * @param pallets A const reference to a vector of Pallet objects, each with an ID, weight, and profit
+ *
+ * @note Time Complexity: Exponential in worst case, as ILP is NP-hard. However, the GLPK solver employs
+ *       various techniques like branch-and-bound and cutting planes to improve practical performance.
+ * @note Space Complexity: O(n) for the ILP model where n is the number of pallets
+ *
+ * @see Pallet
+ * @see Data
+ * @see GNU Linear Programming Kit (GLPK) documentation for more details on the solver
+ */
+
 void integerLinearProgramming(const Data& data, const std::vector<Pallet>& pallets) {
     std::cout << "[Integer Linear Programming Algorithm]\n";
 
