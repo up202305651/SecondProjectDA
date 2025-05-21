@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/untitled1.dir/all
+all: CMakeFiles/SecondProjectDA.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/untitled1.dir/codegen
+codegen: CMakeFiles/SecondProjectDA.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/untitled1.dir/clean
+clean: CMakeFiles/SecondProjectDA.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/untitled1.dir
+# Target rules for target CMakeFiles/SecondProjectDA.dir
 
 # All Build rule for target.
-CMakeFiles/untitled1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target untitled1"
-.PHONY : CMakeFiles/untitled1.dir/all
+CMakeFiles/SecondProjectDA.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target SecondProjectDA"
+.PHONY : CMakeFiles/SecondProjectDA.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/untitled1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/untitled1.dir/all
+CMakeFiles/SecondProjectDA.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SecondProjectDA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/untitled1.dir/rule
+.PHONY : CMakeFiles/SecondProjectDA.dir/rule
 
 # Convenience name for target.
-untitled1: CMakeFiles/untitled1.dir/rule
-.PHONY : untitled1
+SecondProjectDA: CMakeFiles/SecondProjectDA.dir/rule
+.PHONY : SecondProjectDA
 
 # codegen rule for target.
-CMakeFiles/untitled1.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target untitled1"
-.PHONY : CMakeFiles/untitled1.dir/codegen
+CMakeFiles/SecondProjectDA.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target SecondProjectDA"
+.PHONY : CMakeFiles/SecondProjectDA.dir/codegen
 
 # clean rule for target.
-CMakeFiles/untitled1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/clean
-.PHONY : CMakeFiles/untitled1.dir/clean
+CMakeFiles/SecondProjectDA.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/clean
+.PHONY : CMakeFiles/SecondProjectDA.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

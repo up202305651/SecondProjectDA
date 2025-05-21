@@ -3,6 +3,7 @@
 #include "bruteforce.h"
 #include "greedy.h"
 #include "dynamic_prog.h"
+#include "ilp.h"
 #include "reader.h"
 #include "pallet.h"
 
@@ -30,7 +31,7 @@ int main() {
     cout << "1 - Brute Force\n";
     cout << "2 - Dynamic Programming\n";
     cout << "3 - Greedy Approach\n";
-    cout << "4 - Linear Programming (Not Implemented)\n";
+    cout << "4 - Linear Programming\n";
     cout << "Enter your choice: ";
     cin >> option;
 
@@ -48,7 +49,7 @@ int main() {
             break;
         }
         case 4: {
-            cout << "Linear Programming algorithm is not implemented yet.\n";
+            integerLinearProgramming(data, pallets);
             break;
         }
         default:

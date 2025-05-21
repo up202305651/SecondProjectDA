@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/dynamic_prog.cpp.o.d"
   "CMakeFiles/untitled1.dir/greedy.cpp.o"
   "CMakeFiles/untitled1.dir/greedy.cpp.o.d"
+  "CMakeFiles/untitled1.dir/ilp.cpp.o"
+  "CMakeFiles/untitled1.dir/ilp.cpp.o.d"
   "CMakeFiles/untitled1.dir/main.cpp.o"
   "CMakeFiles/untitled1.dir/main.cpp.o.d"
   "CMakeFiles/untitled1.dir/reader.cpp.o"
