@@ -200,6 +200,30 @@ greedy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/greedy.cpp.s
 .PHONY : greedy.cpp.s
 
+ilp.obj: ilp.cpp.obj
+.PHONY : ilp.obj
+
+# target to build an object file
+ilp.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/ilp.cpp.obj
+.PHONY : ilp.cpp.obj
+
+ilp.i: ilp.cpp.i
+.PHONY : ilp.i
+
+# target to preprocess a source file
+ilp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/ilp.cpp.i
+.PHONY : ilp.cpp.i
+
+ilp.s: ilp.cpp.s
+.PHONY : ilp.s
+
+# target to generate assembly for a file
+ilp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/ilp.cpp.s
+.PHONY : ilp.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -223,6 +247,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+read_write.obj: read_write.cpp.obj
+.PHONY : read_write.obj
+
+# target to build an object file
+read_write.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/read_write.cpp.obj
+.PHONY : read_write.cpp.obj
+
+read_write.i: read_write.cpp.i
+.PHONY : read_write.i
+
+# target to preprocess a source file
+read_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/read_write.cpp.i
+.PHONY : read_write.cpp.i
+
+read_write.s: read_write.cpp.s
+.PHONY : read_write.s
+
+# target to generate assembly for a file
+read_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/read_write.cpp.s
+.PHONY : read_write.cpp.s
 
 reader.obj: reader.cpp.obj
 .PHONY : reader.obj
@@ -266,9 +314,15 @@ help:
 	@echo ... greedy.obj
 	@echo ... greedy.i
 	@echo ... greedy.s
+	@echo ... ilp.obj
+	@echo ... ilp.i
+	@echo ... ilp.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... read_write.obj
+	@echo ... read_write.i
+	@echo ... read_write.s
 	@echo ... reader.obj
 	@echo ... reader.i
 	@echo ... reader.s

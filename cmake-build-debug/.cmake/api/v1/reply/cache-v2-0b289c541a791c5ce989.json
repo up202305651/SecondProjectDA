@@ -1258,6 +1258,30 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "Python3_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/.venv/Scripts/python.exe"
+		},
+		{
+			"name" : "Python_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/.venv/Scripts/python.exe"
+		},
+		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
 			"properties" : 
 			[
