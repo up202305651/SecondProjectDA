@@ -11,7 +11,7 @@
 using namespace std;
 
 void greedy(Data& data,vector<Pallet>& pallets);
-bool compare(const Pallet& a, const Pallet& b);
+bool compare_ratio(const Pallet& a, const Pallet& b);
 
 
 #endif //GREEDY_H

@@ -8,46 +8,45 @@
 using namespace std;
 
 void bruteforce(Data& data,vector<Pallet>& pallets) {
-    vector<Pallet> solution;
-    int n = pallets.size(); //later i will use data.n_pallets
-    int maxProfit = 0;
-    int bestMask = 0;
+    vector<Pallet> solucao;
+    int n=pallets.size(); //mesma coisa que usar a o parametro da data
+    int max_profit = 0;
+    int best_mask = 0;
 
-    for (int mask = 0; mask < (1 << n); ++mask) {
-        int currentWeight = 0;
-        int currentProfit = 0;
+    for (int mask=0; mask<(1<<n);++mask){
+        int cur_weight=0;
+        int cur_profit=0;
 
-        for (int i = 0; i < n; ++i) {
-            if (mask & (1 << i)) {
-                currentWeight += pallets[i].weight;
-                currentProfit += pallets[i].profit;
+        for (int i=0; i<n;++i) {
+            if (mask & (1<<i)) {
+                cur_weight+=pallets[i].weight;
+                cur_profit+=pallets[i].profit;
             }
         }
-
-        if (currentWeight <= data.capacity && currentProfit > maxProfit) {
-            maxProfit = currentProfit;
-            bestMask = mask;
+        if (cur_weight<=data.capacity && cur_profit>max_profit) {
+            max_profit=cur_profit;
+            best_mask=mask;
         }
     }
 
     //constrói a melhor solução
-    solution.clear();
+    soluç.clear();
     for (int i = 0; i < n; ++i) {
-        if (bestMask & (1 << i)) {
-            solution.push_back(pallets[i]);
+        if (best_mask & (1 << i)) {
+            soluç.push_back(pallets[i]);
         }
     }
 
     //output
-    int totalWeight = 0;
-    for (const auto& p : solution)
-        totalWeight += p.weight;
+    int total_weight = 0;
+    for (const auto& p : solucao)
+        total_weight += p.weight;
 
-    cout << "[Brute Force Algorithm]\n";
-    std::cout << "Total Profit: " << maxProfit << "\n";
-    std::cout << "Total Weight: " << totalWeight << "\n";
-    std::cout << "Selected Pallets: ";
-    for (const auto& p : solution)
-        std::cout << p.id << " ";
-    std::cout << "\n\n";
+    cout << "Brute Force Algorithm\n";
+    cout << "Lucro total: "<<max_profit<<"\n";
+    cout << "Peso total: "<<total_weight<<"\n";
+    cout << "Pallets selecionados: ";
+    for (const auto& p : solucao)
+        cout<<p.id<<" ";
+    cout << "\n\n";
 }
