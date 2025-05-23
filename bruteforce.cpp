@@ -30,7 +30,7 @@ void bruteforce(Data& data,vector<Pallet>& pallets) {
     }
 
     //constrói a melhor solução
-    soluç.clear();
+    solucao.clear();
     for (int i = 0; i < n; ++i) {
         if (best_mask & (1 << i)) {
             soluç.push_back(pallets[i]);
