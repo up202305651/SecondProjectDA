@@ -6,35 +6,35 @@
 
 #include <algorithm>
 #include <iostream>
+using namespace std;
 
-
-bool compare(const Pallet& a, const Pallet& b) {
+bool compare_ratio(const Pallet& a, const Pallet& b) {
     double ratioA=static_cast<double>(a.profit)/a.weight;
     double ratioB=static_cast<double>(b.profit)/b.weight;
     return ratioA>ratioB;
 }
 
 void greedy(Data& data, std::vector<Pallet>& pallets) {
-    // Sort using the comparison function
-    std::sort(pallets.begin(), pallets.end(), compare);
+    // ordenar pallets por maior profit/weight
+    sort(pallets.begin(),pallets.end(),compare_ratio);
 
-    std::vector<Pallet> selected;
-    int currentWeight = 0;
-    int totalProfit = 0;
+    vector<Pallet> pal_sel;
+    int current_weight=0;
+    int total_profit=0;
 
-    for (const auto& pallet : pallets) {
-        if (currentWeight + pallet.weight <= data.capacity) {
-            selected.push_back(pallet);
-            currentWeight += pallet.weight;
-            totalProfit += pallet.profit;
+    for (const auto& pallet : pallets){
+        if (current_weight+pallet.weight<=data.capacity) {
+            pal_sel.push_back(pallet);
+            current_weight+=pallet.weight;
+            total_profit+=pallet.profit;
         }
     }
 
-    std::cout << "[Greedy Approximation Algorithm]\n";
-    std::cout << "Total Profit: " << totalProfit << "\n";
-    std::cout << "Total Weight: " << currentWeight << "\n";
-    std::cout << "Selected Pallets: ";
-    for (const auto& p : selected)
-        std::cout << p.id << " ";
-    std::cout << "\n\n";
+    cout << "Greedy Approximation Algorithm\n";
+    cout << "Lucro total: " << total_profit << "\n";
+    cout << "Peso total: " << current_weight << "\n";
+    cout << "Pallets selecionados: ";
+    for (const auto& p : pal_sel)
+        cout << p.id << " ";
+    cout << "\n\n";
 }
