@@ -6,32 +6,39 @@
 #include "ilp.h"
 #include "reader.h"
 #include "pallet.h"
+#include "read_write.h"
+#include "ilp.h"
 
 using namespace std;
 
+
+
 int main() {
     vector<Pallet> pallets;
-    readPalletsFile("/home/bia/Documents/feup/DA/SecondProjectDA/pallets.csv",pallets);
+    readPalletsFile("C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/pallets.csv", pallets);
 
     Data data;
-    readTruckFile("/home/bia/Documents/feup/DA/SecondProjectDA/truckandpallets.csv",data);
+    readTruckFile("C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/truckandpallets.csv", data);
 
-    for (int i=0; i<pallets.size(); i++) {
-        cout<<pallets[i].id<<endl;
-        cout<<pallets[i].weight<<endl;
-        cout<<pallets[i].profit<<endl;
+    for (int i = 0; i < pallets.size(); i++) {
+        cout << pallets[i].id << endl;
+        cout << pallets[i].weight << endl;
+        cout << pallets[i].profit << endl;
     }
 
-    cout<<data.capacity<<endl;
-    cout<<data.n_pallets<<endl;
-
+    cout << data.capacity << endl;
+    cout << data.n_pallets << endl;
 
     int option;
     cout << "Choose an algorithm:\n";
     cout << "1 - Brute Force\n";
     cout << "2 - Dynamic Programming\n";
     cout << "3 - Greedy Approach\n";
+<<<<<<< HEAD
     cout << "4 - Linear Programming\n";
+=======
+    cout << "4 - Integer Linear Programming\n";
+>>>>>>> ILP
     cout << "Enter your choice: ";
     cin >> option;
 
@@ -49,7 +56,11 @@ int main() {
             break;
         }
         case 4: {
+<<<<<<< HEAD
             integerLinearProgramming(data, pallets);
+=======
+            runILP(data, pallets);
+>>>>>>> ILP
             break;
         }
         default:

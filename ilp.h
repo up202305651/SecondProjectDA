@@ -2,6 +2,7 @@
 #define ILP_H
 
 #include <vector>
+<<<<<<< HEAD
 #include <chrono>
 #include "pallet.h"
 
@@ -29,3 +30,10 @@
 void integerLinearProgramming(const Data& data, const std::vector<Pallet>& pallets);
 
 #endif //ILP_H
+=======
+#include "pallet.h"
+
+void runILP(const Data& data, const std::vector<Pallet>& pallets);
+
+#endif // ILP_H
+>>>>>>> ILP
