@@ -1,0 +1,62 @@
+\doxysection{ilp.\+cpp File Reference}
+\hypertarget{ilp_8cpp}{}\label{ilp_8cpp}\index{ilp.cpp@{ilp.cpp}}
+
+
+Implementação do algoritmo de Programação Linear Inteira para resolver o problema da mochila.  
+
+
+{\ttfamily \#include "{}ilp.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include "{}read\+\_\+write.\+h"{}}\newline
+Include dependency graph for ilp.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ilp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ilp_8cpp_a6eb241823c5d97e5d3b5a56f5cf6db98}{run\+ILP}} (const \mbox{\hyperlink{structData}{Data}} \&data, const vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&pallets)
+\begin{DoxyCompactList}\small\item\em Executa o algoritmo de Programação Linear Inteira para resolver o problema da mochila. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação do algoritmo de Programação Linear Inteira para resolver o problema da mochila. 
+
+Este arquivo contém a implementação da função que executa o algoritmo de Programação Linear Inteira para resolver o problema da mochila. O algoritmo utiliza um solver externo (em Python) para resolver o problema de otimização linear inteira.
+
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: Depende do solver de Programação Linear Inteira utilizado. Geralmente, solvers de ILP têm complexidade exponencial no pior caso, mas são eficientes na prática para problemas de tamanho moderado. 
+
+Complexidade de Espaço\+: Depende do solver de Programação Linear Inteira utilizado. O espaço adicional é usado principalmente para armazenar os dados de entrada e saída. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ilp_8cpp_a6eb241823c5d97e5d3b5a56f5cf6db98}\label{ilp_8cpp_a6eb241823c5d97e5d3b5a56f5cf6db98} 
+\index{ilp.cpp@{ilp.cpp}!runILP@{runILP}}
+\index{runILP@{runILP}!ilp.cpp@{ilp.cpp}}
+\doxysubsubsection{\texorpdfstring{runILP()}{runILP()}}
+{\footnotesize\ttfamily void run\+ILP (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structData}{Data}} \&}]{data,  }\item[{const vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&}]{pallets }\end{DoxyParamCaption})}
+
+
+
+Executa o algoritmo de Programação Linear Inteira para resolver o problema da mochila. 
+
+Esta função cria um arquivo de entrada, executa um script Python para resolver o problema da mochila usando Programação Linear Inteira e lê os resultados do arquivo de saída. O solver de ILP é chamado externamente e resolve o problema de otimização.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Referência para a estrutura \doxylink{structData}{Data} contendo a capacidade e o número de paletes. \\
+\hline
+{\em pallets} & Referência para o vetor de \doxylink{structPallet}{Pallet} contendo os dados dos paletes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: Depende do solver de Programação Linear Inteira utilizado. Geralmente, solvers de ILP têm complexidade exponencial no pior caso, mas são eficientes na prática para problemas de tamanho moderado. 
+
+Complexidade de Espaço\+: Depende do solver de Programação Linear Inteira utilizado. O espaço adicional é usado principalmente para armazenar os dados de entrada e saída. 
+\end{DoxyNote}

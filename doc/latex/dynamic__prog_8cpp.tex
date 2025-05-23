@@ -1,0 +1,75 @@
+\doxysection{dynamic\+\_\+prog.\+cpp File Reference}
+\hypertarget{dynamic__prog_8cpp}{}\label{dynamic__prog_8cpp}\index{dynamic\_prog.cpp@{dynamic\_prog.cpp}}
+
+
+Implementação do algoritmo de programação dinâmica para resolver o problema da mochila.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}pallet.\+h"{}}\newline
+Include dependency graph for dynamic\+\_\+prog.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dynamic__prog_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dynamic__prog_8cpp_a57dd81ac73a9814c673a432323372adb}{dynamic\+Programming}} (\mbox{\hyperlink{structData}{Data}} \&data, vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&pallets)
+\begin{DoxyCompactList}\small\item\em Solves the 0/1 Knapsack Problem using dynamic programming approach. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação do algoritmo de programação dinâmica para resolver o problema da mochila. 
+
+Este arquivo contém a implementação do algoritmo de programação dinâmica para resolver o problema da mochila, que é uma variação do Problema da Mochila 0/1. O algoritmo utiliza uma abordagem bottom-\/up para construir uma tabela onde dp\mbox{[}i\mbox{]}\mbox{[}w\mbox{]} representa o lucro máximo que pode ser obtido com os primeiros i paletes e uma capacidade de peso w.
+
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n \texorpdfstring{$\ast$}{*} W), onde n é o número de paletes e W é a capacidade do caminhão. Isso ocorre porque o algoritmo preenche uma tabela de dimensões (n+1) x (W+1). 
+
+Complexidade de Espaço\+: O(n \texorpdfstring{$\ast$}{*} W), devido à tabela dp de dimensões (n+1) x (W+1). 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dynamic__prog_8cpp_a57dd81ac73a9814c673a432323372adb}\label{dynamic__prog_8cpp_a57dd81ac73a9814c673a432323372adb} 
+\index{dynamic\_prog.cpp@{dynamic\_prog.cpp}!dynamicProgramming@{dynamicProgramming}}
+\index{dynamicProgramming@{dynamicProgramming}!dynamic\_prog.cpp@{dynamic\_prog.cpp}}
+\doxysubsubsection{\texorpdfstring{dynamicProgramming()}{dynamicProgramming()}}
+{\footnotesize\ttfamily void dynamic\+Programming (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} \&}]{data,  }\item[{vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&}]{pallets }\end{DoxyParamCaption})}
+
+
+
+Solves the 0/1 Knapsack Problem using dynamic programming approach. 
+
+This function implements a bottom-\/up dynamic programming solution to the Delivery Truck \doxylink{structPallet}{Pallet} Packing Optimization Problem, which is a variation of the 0/1 Knapsack Problem. The algorithm creates a 2D table where dp\mbox{[}i\mbox{]}\mbox{[}w\mbox{]} represents the maximum profit that can be obtained with the first i pallets and a weight capacity of w.
+
+For each pallet i and capacity w, the algorithm decides whether to include the pallet in the solution by comparing\+:
+\begin{DoxyEnumerate}
+\item The profit from not including the pallet (dp\mbox{[}i-\/1\mbox{]}\mbox{[}w\mbox{]})
+\item The profit from including the pallet (dp\mbox{[}i-\/1\mbox{]}\mbox{[}w-\/wt\mbox{]} + pf)
+\end{DoxyEnumerate}
+
+After building the table, the algorithm traces back the selected pallets and outputs the total profit, total weight, and the IDs of the selected pallets.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A struct containing problem parameters such as the number of pallets and truck capacity \\
+\hline
+{\em pallets} & A vector of \doxylink{structPallet}{Pallet} objects, each with an ID, weight, and profit\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Time Complexity\+: O(n \texorpdfstring{$\ast$}{*} W) where n is the number of pallets and W is the truck capacity. This is because the algorithm fills a table of dimensions (n+1) x (W+1). 
+
+Space Complexity\+: O(n \texorpdfstring{$\ast$}{*} W) due to the dp table of dimensions (n+1) x (W+1).
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{structPallet}{Pallet} 
+
+\doxylink{structData}{Data} 
+\end{DoxySeeAlso}

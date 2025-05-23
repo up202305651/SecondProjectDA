@@ -1,12 +1,37 @@
-//
-// Created by tomas on 15-04-2025.
-//
+/**
+ * @file bruteforce.cpp
+ * @brief Implementação do algoritmo de força bruta para resolver o problema da mochila.
+ *
+ * Este arquivo contém a implementação do algoritmo de força bruta para resolver o problema da mochila,
+ * avaliando todas as combinações possíveis de paletes. O algoritmo de força bruta é uma abordagem exaustiva
+ * que verifica todas as combinações possíveis de itens para encontrar a solução ótima.
+ *
+ * @note Complexidade de Tempo: O(2^n), onde n é o número de paletes. Isso ocorre porque o algoritmo
+ *       precisa verificar todas as combinações possíveis de paletes, que é 2^n para n itens.
+ * @note Complexidade de Espaço: O(n), onde n é o número de paletes. O espaço adicional é usado
+ *       principalmente para armazenar a solução atual e a melhor solução encontrada.
+ */
 
 #include "bruteforce.h"
 #include <iostream>
 #include <vector>
 using namespace std;
 
+/**
+ * @brief Executa o algoritmo de força bruta para resolver o problema da mochila.
+ *
+ * Esta função avalia todas as combinações possíveis de paletes para encontrar a combinação
+ * que maximiza o lucro sem exceder a capacidade do caminhão. O algoritmo utiliza uma máscara de bits
+ * para representar cada combinação possível de paletes.
+ *
+ * @param data Referência para a estrutura Data contendo a capacidade e o número de paletes.
+ * @param pallets Referência para o vetor de Pallet contendo os dados dos paletes.
+ *
+ * @note Complexidade de Tempo: O(2^n), onde n é o número de paletes. Isso ocorre porque o algoritmo
+ *       precisa verificar todas as combinações possíveis de paletes, que é 2^n para n itens.
+ * @note Complexidade de Espaço: O(n), onde n é o número de paletes. O espaço adicional é usado
+ *       principalmente para armazenar a solução atual e a melhor solução encontrada.
+ */
 void bruteforce(Data& data, vector<Pallet>& pallets) {
     vector<Pallet> solucao;
     int n = pallets.size(); // mesma coisa que usar o parâmetro da data

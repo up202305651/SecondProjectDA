@@ -1,0 +1,52 @@
+\doxysection{knapsack\+\_\+solver Namespace Reference}
+\hypertarget{namespaceknapsack__solver}{}\label{namespaceknapsack__solver}\index{knapsack\_solver@{knapsack\_solver}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespaceknapsack__solver_af948fc8606421e08bd7e15b03148074b}\label{namespaceknapsack__solver_af948fc8606421e08bd7e15b03148074b} 
+{\bfseries lines} = f.\+readlines()
+\item 
+\Hypertarget{namespaceknapsack__solver_a4e23ede9d987dd281da20b96010bc59d}\label{namespaceknapsack__solver_a4e23ede9d987dd281da20b96010bc59d} 
+{\bfseries n} = int(lines\mbox{[}0\mbox{]}.strip())
+\item 
+\Hypertarget{namespaceknapsack__solver_adade251a520e82c90a7cf61b8fd0d98a}\label{namespaceknapsack__solver_adade251a520e82c90a7cf61b8fd0d98a} 
+{\bfseries capacity} = int(lines\mbox{[}1\mbox{]}.strip())
+\item 
+\Hypertarget{namespaceknapsack__solver_ac9c5f6608a716fd2dc5a972b4aa57494}\label{namespaceknapsack__solver_ac9c5f6608a716fd2dc5a972b4aa57494} 
+{\bfseries weights} = list(map(int, lines\mbox{[}2\mbox{]}.strip().split()))
+\item 
+\Hypertarget{namespaceknapsack__solver_a0583ea2a4ef34c0d5c7b7d470c07dee5}\label{namespaceknapsack__solver_a0583ea2a4ef34c0d5c7b7d470c07dee5} 
+{\bfseries profits} = list(map(int, lines\mbox{[}3\mbox{]}.strip().split()))
+\item 
+\Hypertarget{namespaceknapsack__solver_af9e0ee8a52e7f70f8110396f3439cf5f}\label{namespaceknapsack__solver_af9e0ee8a52e7f70f8110396f3439cf5f} 
+{\bfseries model} = Lp\+Problem("{}Knapsack"{}, Lp\+Maximize)
+\item 
+\Hypertarget{namespaceknapsack__solver_a7d4cca41505a398d5986c5369d41f245}\label{namespaceknapsack__solver_a7d4cca41505a398d5986c5369d41f245} 
+list {\bfseries x} = \mbox{[}Lp\+Variable(f"{}x\{i\}"{}, cat="{}Binary"{}) for i in range(n)\mbox{]}
+\item 
+\Hypertarget{namespaceknapsack__solver_a009c016aeb47ea9314ef635d6e1d757f}\label{namespaceknapsack__solver_a009c016aeb47ea9314ef635d6e1d757f} 
+list {\bfseries selected} = \mbox{[}str(i) for i in range(n) if x\mbox{[}i\mbox{]}.var\+Value $>$ 0.\+5\mbox{]}
+\item 
+\Hypertarget{namespaceknapsack__solver_afc9c7892777c4694dfd9c1124a29c0b0}\label{namespaceknapsack__solver_afc9c7892777c4694dfd9c1124a29c0b0} 
+{\bfseries total\+\_\+profit} = sum(profits\mbox{[}int(i)\mbox{]} for i in selected)
+\item 
+\Hypertarget{namespaceknapsack__solver_a9cf914df7285c1dc418d02b7a34a2672}\label{namespaceknapsack__solver_a9cf914df7285c1dc418d02b7a34a2672} 
+{\bfseries total\+\_\+weight} = sum(weights\mbox{[}int(i)\mbox{]} for i in selected)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file knapsack_Solver.py
+@brief Solver de Programação Linear Inteira para o Problema da Mochila.
+
+Este script Python utiliza a biblioteca PuLP para resolver o Problema da Mochila 0/1 usando
+Programação Linear Inteira (ILP). O script lê os dados de entrada de um arquivo, define o problema de otimização,
+resolve-o usando um solver de ILP e escreve os resultados em um arquivo de saída.
+
+@note Complexidade de Tempo: Depende do solver de Programação Linear Inteira utilizado. Geralmente,
+       solvers de ILP têm complexidade exponencial no pior caso, mas são eficientes na prática para
+       problemas de tamanho moderado.
+@note Complexidade de Espaço: Depende do solver de Programação Linear Inteira utilizado. O espaço
+       adicional é usado principalmente para armazenar os dados de entrada e saída.
+\end{DoxyVerb}
+ 

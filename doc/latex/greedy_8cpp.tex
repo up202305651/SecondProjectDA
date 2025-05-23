@@ -1,0 +1,85 @@
+\doxysection{greedy.\+cpp File Reference}
+\hypertarget{greedy_8cpp}{}\label{greedy_8cpp}\index{greedy.cpp@{greedy.cpp}}
+
+
+Implementação do algoritmo guloso para resolver o problema da mochila.  
+
+
+{\ttfamily \#include "{}greedy.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for greedy.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{greedy_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{greedy_8cpp_a4764fdcf42178fa2f5ad5de07d82e390}{compare\+\_\+ratio}} (const \mbox{\hyperlink{structPallet}{Pallet}} \&a, const \mbox{\hyperlink{structPallet}{Pallet}} \&b)
+\begin{DoxyCompactList}\small\item\em Compara dois paletes com base na razão lucro/peso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{greedy_8cpp_aeebef4cb4fc7c31bde6b5cb63a0af0ac}{greedy}} (\mbox{\hyperlink{structData}{Data}} \&data, std\+::vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&pallets)
+\begin{DoxyCompactList}\small\item\em Executa o algoritmo guloso para resolver o problema da mochila. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação do algoritmo guloso para resolver o problema da mochila. 
+
+Este arquivo contém a implementação do algoritmo guloso para resolver o problema da mochila, ordenando os paletes pela razão lucro/peso. O algoritmo guloso é uma abordagem heurística que seleciona localmente a melhor opção em cada etapa, com a esperança de encontrar uma solução globalmente ótima.
+
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n log n), devido à ordenação dos paletes pela razão lucro/peso. A ordenação é feita uma vez, e depois o algoritmo itera sobre os paletes uma vez. 
+
+Complexidade de Espaço\+: O(n), onde n é o número de paletes. O espaço adicional é usado principalmente para armazenar a solução atual. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{greedy_8cpp_a4764fdcf42178fa2f5ad5de07d82e390}\label{greedy_8cpp_a4764fdcf42178fa2f5ad5de07d82e390} 
+\index{greedy.cpp@{greedy.cpp}!compare\_ratio@{compare\_ratio}}
+\index{compare\_ratio@{compare\_ratio}!greedy.cpp@{greedy.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_ratio()}{compare\_ratio()}}
+{\footnotesize\ttfamily bool compare\+\_\+ratio (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structPallet}{Pallet}} \&}]{a,  }\item[{const \mbox{\hyperlink{structPallet}{Pallet}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Compara dois paletes com base na razão lucro/peso. 
+
+Esta função é usada para ordenar os paletes pela razão lucro/peso.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Primeiro pallet. \\
+\hline
+{\em b} & Segundo pallet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a razão lucro/peso do primeiro pallet for maior que a do segundo. 
+\end{DoxyReturn}
+\Hypertarget{greedy_8cpp_aeebef4cb4fc7c31bde6b5cb63a0af0ac}\label{greedy_8cpp_aeebef4cb4fc7c31bde6b5cb63a0af0ac} 
+\index{greedy.cpp@{greedy.cpp}!greedy@{greedy}}
+\index{greedy@{greedy}!greedy.cpp@{greedy.cpp}}
+\doxysubsubsection{\texorpdfstring{greedy()}{greedy()}}
+{\footnotesize\ttfamily void greedy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} \&}]{data,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&}]{pallets }\end{DoxyParamCaption})}
+
+
+
+Executa o algoritmo guloso para resolver o problema da mochila. 
+
+Esta função ordena os paletes pela razão lucro/peso e seleciona os paletes com a maior razão até que a capacidade do caminhão seja atingida. O algoritmo guloso não garante a solução ótima, mas é eficiente em termos de tempo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Referência para a estrutura \doxylink{structData}{Data} contendo a capacidade e o número de paletes. \\
+\hline
+{\em pallets} & Referência para o vetor de \doxylink{structPallet}{Pallet} contendo os dados dos paletes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n log n), devido à ordenação dos paletes pela razão lucro/peso. A ordenação é feita uma vez, e depois o algoritmo itera sobre os paletes uma vez. 
+
+Complexidade de Espaço\+: O(n), onde n é o número de paletes. O espaço adicional é usado principalmente para armazenar a solução atual. 
+\end{DoxyNote}

@@ -1,0 +1,50 @@
+\doxysection{Data Struct Reference}
+\hypertarget{structData}{}\label{structData}\index{Data@{Data}}
+
+
+Estrutura que representa os dados do caminhão.  
+
+
+
+
+{\ttfamily \#include $<$pallet.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structData_a930fb9f54bdb17fa992dd2d7af0fce55}{capacity}}
+\item 
+int \mbox{\hyperlink{structData_af4e372b2a9810b17945fd05b78743823}{n\+\_\+pallets}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estrutura que representa os dados do caminhão. 
+
+Esta estrutura contém informações sobre o caminhão, incluindo sua capacidade máxima e o número total de paletes disponíveis. É utilizada para definir os parâmetros do problema da mochila e limitar as soluções possíveis.
+
+\begin{DoxyNote}{Note}
+A capacidade do caminhão é um fator crucial que limita o peso total dos paletes que podem ser incluídos na solução. O número de paletes é usado para dimensionar as estruturas de dados e loops necessários para resolver o problema. 
+
+A utilização de uma estrutura para representar os dados do caminhão permite uma gestão centralizada dos parâmetros do problema, facilitando a passagem de informações entre as diferentes funções e algoritmos. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structData_a930fb9f54bdb17fa992dd2d7af0fce55}\label{structData_a930fb9f54bdb17fa992dd2d7af0fce55} 
+\index{Data@{Data}!capacity@{capacity}}
+\index{capacity@{capacity}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int Data\+::capacity}
+
+Capacidade do caminhão. Representa o peso máximo que o caminhão pode transportar. \Hypertarget{structData_af4e372b2a9810b17945fd05b78743823}\label{structData_af4e372b2a9810b17945fd05b78743823} 
+\index{Data@{Data}!n\_pallets@{n\_pallets}}
+\index{n\_pallets@{n\_pallets}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{n\_pallets}{n\_pallets}}
+{\footnotesize\ttfamily int Data\+::n\+\_\+pallets}
+
+Número de paletes. Representa o número total de paletes disponíveis para seleção. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+pallet.\+h\end{DoxyCompactItemize}

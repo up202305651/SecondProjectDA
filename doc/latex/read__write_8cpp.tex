@@ -1,0 +1,91 @@
+\doxysection{read\+\_\+write.\+cpp File Reference}
+\hypertarget{read__write_8cpp}{}\label{read__write_8cpp}\index{read\_write.cpp@{read\_write.cpp}}
+
+
+Implementação das funções para criação e leitura de arquivos de entrada e saída.  
+
+
+{\ttfamily \#include "{}read\+\_\+write.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}pallet.\+h"{}}\newline
+Include dependency graph for read\+\_\+write.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read__write_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{read__write_8cpp_afa61682e71bce6290060e4ce97a89410}{create\+Input\+File}} (const \mbox{\hyperlink{structData}{Data}} \&data, const vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&pallets)
+\begin{DoxyCompactList}\small\item\em Cria um arquivo de entrada com os dados fornecidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{read__write_8cpp_aedc0bad3ef41a441562bb9877a2d27b5}{read\+Output\+File}} (int \&total\+Profit, int \&total\+Weight, vector$<$ int $>$ \&selected)
+\begin{DoxyCompactList}\small\item\em Lê os resultados de um arquivo de saída. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções para criação e leitura de arquivos de entrada e saída. 
+
+Este arquivo contém a implementação das funções que criam arquivos de entrada com os dados dos paletes e lêem os resultados de arquivos de saída. Essas funções são essenciais para a interação com o solver de Programação Linear Inteira, permitindo a comunicação entre o programa C++ e o script Python.
+
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n), onde n é o número de paletes, para a função create\+Input\+File. 
+
+Complexidade de Espaço\+: O(n), onde n é o número de paletes, para a função create\+Input\+File. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{read__write_8cpp_afa61682e71bce6290060e4ce97a89410}\label{read__write_8cpp_afa61682e71bce6290060e4ce97a89410} 
+\index{read\_write.cpp@{read\_write.cpp}!createInputFile@{createInputFile}}
+\index{createInputFile@{createInputFile}!read\_write.cpp@{read\_write.cpp}}
+\doxysubsubsection{\texorpdfstring{createInputFile()}{createInputFile()}}
+{\footnotesize\ttfamily void create\+Input\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structData}{Data}} \&}]{data,  }\item[{const vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&}]{pallets }\end{DoxyParamCaption})}
+
+
+
+Cria um arquivo de entrada com os dados fornecidos. 
+
+Esta função cria um arquivo de entrada com os dados dos paletes e a capacidade do caminhão.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Referência para a estrutura \doxylink{structData}{Data} contendo a capacidade e o número de paletes. \\
+\hline
+{\em pallets} & Referência para o vetor de \doxylink{structPallet}{Pallet} contendo os dados dos paletes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n), onde n é o número de paletes. 
+
+Complexidade de Espaço\+: O(n), onde n é o número de paletes. 
+\end{DoxyNote}
+\Hypertarget{read__write_8cpp_aedc0bad3ef41a441562bb9877a2d27b5}\label{read__write_8cpp_aedc0bad3ef41a441562bb9877a2d27b5} 
+\index{read\_write.cpp@{read\_write.cpp}!readOutputFile@{readOutputFile}}
+\index{readOutputFile@{readOutputFile}!read\_write.cpp@{read\_write.cpp}}
+\doxysubsubsection{\texorpdfstring{readOutputFile()}{readOutputFile()}}
+{\footnotesize\ttfamily void read\+Output\+File (\begin{DoxyParamCaption}\item[{int \&}]{total\+Profit,  }\item[{int \&}]{total\+Weight,  }\item[{vector$<$ int $>$ \&}]{selected }\end{DoxyParamCaption})}
+
+
+
+Lê os resultados de um arquivo de saída. 
+
+Esta função lê o arquivo de saída e extrai o lucro total, o peso total e os índices dos paletes selecionados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Profit} & Referência para o inteiro onde o lucro total será armazenado. \\
+\hline
+{\em total\+Weight} & Referência para o inteiro onde o peso total será armazenado. \\
+\hline
+{\em selected} & Referência para o vetor de inteiros onde os índices dos paletes selecionados serão armazenados.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(m), onde m é o número de paletes selecionados. 
+
+Complexidade de Espaço\+: O(m), onde m é o número de paletes selecionados. 
+\end{DoxyNote}

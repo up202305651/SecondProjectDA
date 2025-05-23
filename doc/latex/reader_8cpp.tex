@@ -1,0 +1,90 @@
+\doxysection{reader.\+cpp File Reference}
+\hypertarget{reader_8cpp}{}\label{reader_8cpp}\index{reader.cpp@{reader.cpp}}
+
+
+Implementação das funções para leitura de arquivos.  
+
+
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}reader.\+h"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for reader.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{reader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{reader_8cpp_aa2da332a3049efdd48d6434ec4cdfa4b}{read\+Truck\+File}} (const std\+::string \&filename, \mbox{\hyperlink{structData}{Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Lê os dados do caminhão de um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{reader_8cpp_a5f796a1be3f023149cbe93165b2dbd96}{read\+Pallets\+File}} (const std\+::string \&filename, std\+::vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&pallets)
+\begin{DoxyCompactList}\small\item\em Lê os dados dos paletes de um arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções para leitura de arquivos. 
+
+Este arquivo contém a implementação das funções que lêem os dados dos paletes e do caminhão a partir de arquivos CSV. Essas funções são responsáveis por carregar os dados necessários para resolver o problema da mochila.
+
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n), onde n é o número de linhas no arquivo de paletes. 
+
+Complexidade de Espaço\+: O(n), onde n é o número de paletes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{reader_8cpp_a5f796a1be3f023149cbe93165b2dbd96}\label{reader_8cpp_a5f796a1be3f023149cbe93165b2dbd96} 
+\index{reader.cpp@{reader.cpp}!readPalletsFile@{readPalletsFile}}
+\index{readPalletsFile@{readPalletsFile}!reader.cpp@{reader.cpp}}
+\doxysubsubsection{\texorpdfstring{readPalletsFile()}{readPalletsFile()}}
+{\footnotesize\ttfamily void read\+Pallets\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structPallet}{Pallet}} $>$ \&}]{pallets }\end{DoxyParamCaption})}
+
+
+
+Lê os dados dos paletes de um arquivo. 
+
+Esta função lê o arquivo especificado e extrai os dados dos paletes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nome do arquivo a ser lido. \\
+\hline
+{\em pallets} & Referência para o vetor de \doxylink{structPallet}{Pallet} onde os dados serão armazenados.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(n), onde n é o número de linhas no arquivo de paletes. 
+
+Complexidade de Espaço\+: O(n), onde n é o número de paletes. 
+\end{DoxyNote}
+\Hypertarget{reader_8cpp_aa2da332a3049efdd48d6434ec4cdfa4b}\label{reader_8cpp_aa2da332a3049efdd48d6434ec4cdfa4b} 
+\index{reader.cpp@{reader.cpp}!readTruckFile@{readTruckFile}}
+\index{readTruckFile@{readTruckFile}!reader.cpp@{reader.cpp}}
+\doxysubsubsection{\texorpdfstring{readTruckFile()}{readTruckFile()}}
+{\footnotesize\ttfamily void read\+Truck\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{\mbox{\hyperlink{structData}{Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Lê os dados do caminhão de um arquivo. 
+
+Esta função lê o arquivo especificado e extrai a capacidade e o número de paletes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nome do arquivo a ser lido. \\
+\hline
+{\em data} & Referência para a estrutura \doxylink{structData}{Data} onde os dados serão armazenados.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexidade de Tempo\+: O(1), pois lê apenas duas linhas do arquivo. 
+
+Complexidade de Espaço\+: O(1), pois armazena apenas dois valores. 
+\end{DoxyNote}

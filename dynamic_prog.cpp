@@ -1,8 +1,19 @@
-//
-// Created by bia on 5/11/25.
-//
+/**
+ * @file dynamic_prog.cpp
+ * @brief Implementação do algoritmo de programação dinâmica para resolver o problema da mochila.
+ *
+ * Este arquivo contém a implementação do algoritmo de programação dinâmica para resolver o problema da mochila,
+ * que é uma variação do Problema da Mochila 0/1. O algoritmo utiliza uma abordagem bottom-up para construir uma tabela
+ * onde dp[i][w] representa o lucro máximo que pode ser obtido com os primeiros i paletes e uma capacidade de peso w.
+ *
+ * @note Complexidade de Tempo: O(n * W), onde n é o número de paletes e W é a capacidade do caminhão.
+ *       Isso ocorre porque o algoritmo preenche uma tabela de dimensões (n+1) x (W+1).
+ * @note Complexidade de Espaço: O(n * W), devido à tabela dp de dimensões (n+1) x (W+1).
+ */
+
 #include <vector>
 #include <iostream>
+#include <algorithm>
 #include "pallet.h"
 
 using namespace std;
@@ -26,8 +37,9 @@ using namespace std;
  * @param data A struct containing problem parameters such as the number of pallets and truck capacity
  * @param pallets A vector of Pallet objects, each with an ID, weight, and profit
  *
- * @note Time Complexity: O(n * W) where n is the number of pallets and W is the truck capacity
- * @note Space Complexity: O(n * W) for the dynamic programming table
+ * @note Time Complexity: O(n * W) where n is the number of pallets and W is the truck capacity.
+ *       This is because the algorithm fills a table of dimensions (n+1) x (W+1).
+ * @note Space Complexity: O(n * W) due to the dp table of dimensions (n+1) x (W+1).
  *
  * @see Pallet
  * @see Data
@@ -73,6 +85,7 @@ void dynamicProgramming(Data& data, vector<Pallet>& pallets) {
     cout << "Total Profit: " << dp[n][W] << "\n";
     cout << "Total Weight: " << totalWeight << "\n";
     cout << "Selected Pallets: ";
+    reverse(solution.begin(), solution.end());
     for (auto& p : solution)    {
         cout << p.id << " ";
     }
