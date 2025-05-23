@@ -116,19 +116,9 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SecondProjectDA
+# Target rules for targets named untitled1
 
 # Build rule for target.
-<<<<<<< HEAD
-SecondProjectDA: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SecondProjectDA
-.PHONY : SecondProjectDA
-
-# fast build rule for target.
-SecondProjectDA/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/build
-.PHONY : SecondProjectDA/fast
-=======
 untitled1: cmake_check_build_system
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 untitled1
 .PHONY : untitled1
@@ -137,32 +127,21 @@ untitled1: cmake_check_build_system
 untitled1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/build
 .PHONY : untitled1/fast
->>>>>>> ILP
 
 bruteforce.obj: bruteforce.cpp.obj
 .PHONY : bruteforce.obj
 
 # target to build an object file
-<<<<<<< HEAD
-bruteforce.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/bruteforce.cpp.o
-.PHONY : bruteforce.cpp.o
-=======
 bruteforce.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/bruteforce.cpp.obj
 .PHONY : bruteforce.cpp.obj
->>>>>>> ILP
 
 bruteforce.i: bruteforce.cpp.i
 .PHONY : bruteforce.i
 
 # target to preprocess a source file
 bruteforce.cpp.i:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/bruteforce.cpp.i
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/bruteforce.cpp.i
->>>>>>> ILP
 .PHONY : bruteforce.cpp.i
 
 bruteforce.s: bruteforce.cpp.s
@@ -170,37 +149,23 @@ bruteforce.s: bruteforce.cpp.s
 
 # target to generate assembly for a file
 bruteforce.cpp.s:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/bruteforce.cpp.s
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/bruteforce.cpp.s
->>>>>>> ILP
 .PHONY : bruteforce.cpp.s
 
 dynamic_prog.obj: dynamic_prog.cpp.obj
 .PHONY : dynamic_prog.obj
 
 # target to build an object file
-<<<<<<< HEAD
-dynamic_prog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/dynamic_prog.cpp.o
-.PHONY : dynamic_prog.cpp.o
-=======
 dynamic_prog.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/dynamic_prog.cpp.obj
 .PHONY : dynamic_prog.cpp.obj
->>>>>>> ILP
 
 dynamic_prog.i: dynamic_prog.cpp.i
 .PHONY : dynamic_prog.i
 
 # target to preprocess a source file
 dynamic_prog.cpp.i:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/dynamic_prog.cpp.i
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/dynamic_prog.cpp.i
->>>>>>> ILP
 .PHONY : dynamic_prog.cpp.i
 
 dynamic_prog.s: dynamic_prog.cpp.s
@@ -208,37 +173,23 @@ dynamic_prog.s: dynamic_prog.cpp.s
 
 # target to generate assembly for a file
 dynamic_prog.cpp.s:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/dynamic_prog.cpp.s
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/dynamic_prog.cpp.s
->>>>>>> ILP
 .PHONY : dynamic_prog.cpp.s
 
 greedy.obj: greedy.cpp.obj
 .PHONY : greedy.obj
 
 # target to build an object file
-<<<<<<< HEAD
-greedy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/greedy.cpp.o
-.PHONY : greedy.cpp.o
-=======
 greedy.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/greedy.cpp.obj
 .PHONY : greedy.cpp.obj
->>>>>>> ILP
 
 greedy.i: greedy.cpp.i
 .PHONY : greedy.i
 
 # target to preprocess a source file
 greedy.cpp.i:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/greedy.cpp.i
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/greedy.cpp.i
->>>>>>> ILP
 .PHONY : greedy.cpp.i
 
 greedy.s: greedy.cpp.s
@@ -246,42 +197,6 @@ greedy.s: greedy.cpp.s
 
 # target to generate assembly for a file
 greedy.cpp.s:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/greedy.cpp.s
-.PHONY : greedy.cpp.s
-
-ilp.o: ilp.cpp.o
-.PHONY : ilp.o
-
-# target to build an object file
-ilp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/ilp.cpp.o
-.PHONY : ilp.cpp.o
-
-ilp.i: ilp.cpp.i
-.PHONY : ilp.i
-
-# target to preprocess a source file
-ilp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/ilp.cpp.i
-.PHONY : ilp.cpp.i
-
-ilp.s: ilp.cpp.s
-.PHONY : ilp.s
-
-# target to generate assembly for a file
-ilp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/ilp.cpp.s
-.PHONY : ilp.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/main.cpp.o
-.PHONY : main.cpp.o
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/greedy.cpp.s
 .PHONY : greedy.cpp.s
 
@@ -316,18 +231,13 @@ main.obj: main.cpp.obj
 main.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.obj
 .PHONY : main.cpp.obj
->>>>>>> ILP
 
 main.i: main.cpp.i
 .PHONY : main.i
 
 # target to preprocess a source file
 main.cpp.i:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/main.cpp.i
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.i
->>>>>>> ILP
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -335,22 +245,13 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/main.cpp.s
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.s
->>>>>>> ILP
 .PHONY : main.cpp.s
 
 read_write.obj: read_write.cpp.obj
 .PHONY : read_write.obj
 
 # target to build an object file
-<<<<<<< HEAD
-reader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/reader.cpp.o
-.PHONY : reader.cpp.o
-=======
 read_write.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/read_write.cpp.obj
 .PHONY : read_write.cpp.obj
@@ -378,18 +279,13 @@ reader.obj: reader.cpp.obj
 reader.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/reader.cpp.obj
 .PHONY : reader.cpp.obj
->>>>>>> ILP
 
 reader.i: reader.cpp.i
 .PHONY : reader.i
 
 # target to preprocess a source file
 reader.cpp.i:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/reader.cpp.i
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/reader.cpp.i
->>>>>>> ILP
 .PHONY : reader.cpp.i
 
 reader.s: reader.cpp.s
@@ -397,42 +293,11 @@ reader.s: reader.cpp.s
 
 # target to generate assembly for a file
 reader.cpp.s:
-<<<<<<< HEAD
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SecondProjectDA.dir/build.make CMakeFiles/SecondProjectDA.dir/reader.cpp.s
-=======
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/reader.cpp.s
->>>>>>> ILP
 .PHONY : reader.cpp.s
 
 # Help Target
 help:
-<<<<<<< HEAD
-	@echo "The following are some of the valid targets for this Makefile:"
-	@echo "... all (the default if no target is provided)"
-	@echo "... clean"
-	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... SecondProjectDA"
-	@echo "... bruteforce.o"
-	@echo "... bruteforce.i"
-	@echo "... bruteforce.s"
-	@echo "... dynamic_prog.o"
-	@echo "... dynamic_prog.i"
-	@echo "... dynamic_prog.s"
-	@echo "... greedy.o"
-	@echo "... greedy.i"
-	@echo "... greedy.s"
-	@echo "... ilp.o"
-	@echo "... ilp.i"
-	@echo "... ilp.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... reader.o"
-	@echo "... reader.i"
-	@echo "... reader.s"
-=======
 	@echo The following are some of the valid targets for this Makefile:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
@@ -461,7 +326,6 @@ help:
 	@echo ... reader.obj
 	@echo ... reader.i
 	@echo ... reader.s
->>>>>>> ILP
 .PHONY : help
 
 

@@ -70,7 +70,6 @@ CMakeFiles/untitled1.dir/ilp.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/max_size_type.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numbers \
  C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\pallet.h \
- C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\read_write.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
@@ -157,4 +156,5 @@ CMakeFiles/untitled1.dir/ilp.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
- C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc
+ C:/Program\ Files/JetBrains/CLion\ 2024.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\read_write.h

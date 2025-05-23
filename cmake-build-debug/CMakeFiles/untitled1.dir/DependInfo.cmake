@@ -8,15 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-<<<<<<< HEAD
-  "/home/bia/Documents/feup/DA/SecondProjectDA/bruteforce.cpp" "CMakeFiles/untitled1.dir/bruteforce.cpp.o" "gcc" "CMakeFiles/untitled1.dir/bruteforce.cpp.o.d"
-  "/home/bia/Documents/feup/DA/SecondProjectDA/dynamic_prog.cpp" "CMakeFiles/untitled1.dir/dynamic_prog.cpp.o" "gcc" "CMakeFiles/untitled1.dir/dynamic_prog.cpp.o.d"
-  "/home/bia/Documents/feup/DA/SecondProjectDA/greedy.cpp" "CMakeFiles/untitled1.dir/greedy.cpp.o" "gcc" "CMakeFiles/untitled1.dir/greedy.cpp.o.d"
-  "/home/bia/Documents/feup/DA/SecondProjectDA/ilp.cpp" "CMakeFiles/untitled1.dir/ilp.cpp.o" "gcc" "CMakeFiles/untitled1.dir/ilp.cpp.o.d"
-  "/home/bia/Documents/feup/DA/SecondProjectDA/main.cpp" "CMakeFiles/untitled1.dir/main.cpp.o" "gcc" "CMakeFiles/untitled1.dir/main.cpp.o.d"
-  "/home/bia/Documents/feup/DA/SecondProjectDA/reader.cpp" "CMakeFiles/untitled1.dir/reader.cpp.o" "gcc" "CMakeFiles/untitled1.dir/reader.cpp.o.d"
-  "" "untitled1" "gcc" "CMakeFiles/untitled1.dir/link.d"
-=======
   "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/bruteforce.cpp" "CMakeFiles/untitled1.dir/bruteforce.cpp.obj" "gcc" "CMakeFiles/untitled1.dir/bruteforce.cpp.obj.d"
   "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/dynamic_prog.cpp" "CMakeFiles/untitled1.dir/dynamic_prog.cpp.obj" "gcc" "CMakeFiles/untitled1.dir/dynamic_prog.cpp.obj.d"
   "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/greedy.cpp" "CMakeFiles/untitled1.dir/greedy.cpp.obj" "gcc" "CMakeFiles/untitled1.dir/greedy.cpp.obj.d"
@@ -24,7 +15,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/main.cpp" "CMakeFiles/untitled1.dir/main.cpp.obj" "gcc" "CMakeFiles/untitled1.dir/main.cpp.obj.d"
   "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/read_write.cpp" "CMakeFiles/untitled1.dir/read_write.cpp.obj" "gcc" "CMakeFiles/untitled1.dir/read_write.cpp.obj.d"
   "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/reader.cpp" "CMakeFiles/untitled1.dir/reader.cpp.obj" "gcc" "CMakeFiles/untitled1.dir/reader.cpp.obj.d"
->>>>>>> ILP
   )
 
 # Targets to which this target links which contain Fortran sources.

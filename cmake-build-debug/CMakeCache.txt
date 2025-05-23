@@ -110,7 +110,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/Dival/Documents/Universidade/2A
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/untitled1
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/SecondProjectDA
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/bin/ld.exe
@@ -154,7 +154,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=SecondProjectDA
+CMAKE_PROJECT_NAME:STATIC=untitled1
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/JetBrains/CLion 2024.3.3/bin/mingw/bin/ranlib.exe
@@ -239,34 +239,23 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-<<<<<<< HEAD
 //Path to a library.
-GLPK_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libglpk.so
+GLPK_LIBRARY:FILEPATH=GLPK_LIBRARY-NOTFOUND
 
-//Arguments to supply to pkg-config
-PKG_CONFIG_ARGN:STRING=
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
-
-//Value Computed by CMake
-SecondProjectDA_BINARY_DIR:STATIC=/home/bia/Documents/feup/DA/SecondProjectDA/cmake-build-debug
-
-//Value Computed by CMake
-SecondProjectDA_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-SecondProjectDA_SOURCE_DIR:STATIC=/home/bia/Documents/feup/DA/SecondProjectDA
-
-//The directory containing a CMake configuration file for ortools.
-ortools_DIR:PATH=ortools_DIR-NOTFOUND
-=======
 //No help, variable specified on the command line.
 Python3_EXECUTABLE:UNINITIALIZED=C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/.venv/Scripts/python.exe
 
 //No help, variable specified on the command line.
 Python_EXECUTABLE:UNINITIALIZED=C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/.venv/Scripts/python.exe
->>>>>>> ILP
+
+//Value Computed by CMake
+SecondProjectDA_BINARY_DIR:STATIC=C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/cmake-build-debug
+
+//Value Computed by CMake
+SecondProjectDA_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+SecondProjectDA_SOURCE_DIR:STATIC=C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA
 
 //Value Computed by CMake
 untitled1_BINARY_DIR:STATIC=C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/cmake-build-debug
@@ -436,37 +425,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
-ORTOOLS_CFLAGS:INTERNAL=
-ORTOOLS_CFLAGS_I:INTERNAL=
-ORTOOLS_CFLAGS_OTHER:INTERNAL=
-ORTOOLS_FOUND:INTERNAL=
-ORTOOLS_INCLUDEDIR:INTERNAL=
-ORTOOLS_LIBDIR:INTERNAL=
-ORTOOLS_LIBS:INTERNAL=
-ORTOOLS_LIBS_L:INTERNAL=
-ORTOOLS_LIBS_OTHER:INTERNAL=
-ORTOOLS_LIBS_PATHS:INTERNAL=
-ORTOOLS_MODULE_NAME:INTERNAL=
-ORTOOLS_PREFIX:INTERNAL=
-ORTOOLS_STATIC_CFLAGS:INTERNAL=
-ORTOOLS_STATIC_CFLAGS_I:INTERNAL=
-ORTOOLS_STATIC_CFLAGS_OTHER:INTERNAL=
-ORTOOLS_STATIC_LIBDIR:INTERNAL=
-ORTOOLS_STATIC_LIBS:INTERNAL=
-ORTOOLS_STATIC_LIBS_L:INTERNAL=
-ORTOOLS_STATIC_LIBS_OTHER:INTERNAL=
-ORTOOLS_STATIC_LIBS_PATHS:INTERNAL=
-ORTOOLS_VERSION:INTERNAL=
-ORTOOLS_ortools_INCLUDEDIR:INTERNAL=
-ORTOOLS_ortools_LIBDIR:INTERNAL=
-ORTOOLS_ortools_PREFIX:INTERNAL=
-ORTOOLS_ortools_VERSION:INTERNAL=
-//ADVANCED property for variable: PKG_CONFIG_ARGN
-PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

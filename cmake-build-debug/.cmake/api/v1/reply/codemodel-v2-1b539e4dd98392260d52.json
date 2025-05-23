@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.10"
+						"string" : "3.30"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "SecondProjectDA",
+					"name" : "untitled1",
 					"targetIndexes" : 
 					[
 						0
@@ -38,15 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5f2e2aaddd9c88c40c89.json
-					"id" : "SecondProjectDA::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SecondProjectDA-Debug-13f9fb6596c5154209eb.json",
-					"name" : "SecondProjectDA",
-========
 					"id" : "untitled1::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-untitled1-Debug-568d9f54d4e4a545ed2b.json",
 					"name" : "untitled1",
->>>>>>>> ILP:cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1b539e4dd98392260d52.json
 					"projectIndex" : 0
 				}
 			]
