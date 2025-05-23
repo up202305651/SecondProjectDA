@@ -3,7 +3,6 @@
 #include "bruteforce.h"
 #include "greedy.h"
 #include "dynamic_prog.h"
-#include "ilp.h"
 #include "reader.h"
 #include "pallet.h"
 #include "read_write.h"
@@ -34,11 +33,7 @@ int main() {
     cout << "1 - Brute Force\n";
     cout << "2 - Dynamic Programming\n";
     cout << "3 - Greedy Approach\n";
-<<<<<<< HEAD
-    cout << "4 - Linear Programming\n";
-=======
     cout << "4 - Integer Linear Programming\n";
->>>>>>> ILP
     cout << "Enter your choice: ";
     cin >> option;
 
@@ -56,11 +51,7 @@ int main() {
             break;
         }
         case 4: {
-<<<<<<< HEAD
-            integerLinearProgramming(data, pallets);
-=======
             runILP(data, pallets);
->>>>>>> ILP
             break;
         }
         default:
@@ -69,4 +60,3 @@ int main() {
 
     return 0;
 }
-

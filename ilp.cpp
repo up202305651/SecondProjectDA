@@ -1,62 +1,24 @@
-#include <iostream>
-
-#include "bruteforce.h"
-#include "greedy.h"
-#include "dynamic_prog.h"
-#include "reader.h"
-#include "pallet.h"
-#include "read_write.h"
 #include "ilp.h"
+#include <iostream>
+#include <cstdlib>
+#include "read_write.h"
 
 using namespace std;
 
+void runILP(const Data& data, const vector<Pallet>& pallets) {
+    createInputFile(data, pallets);
+    system("python \"C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/knapsack_Solver.py\" input.txt output.txt");
 
+    int totalProfit, totalWeight;
+    vector<int> selected;
+    readOutputFile(totalProfit, totalWeight, selected);
 
-int main() {
-    vector<Pallet> pallets;
-    readPalletsFile("C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/pallets.csv", pallets);
-
-    Data data;
-    readTruckFile("C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/truckandpallets.csv", data);
-
-    for (int i = 0; i < pallets.size(); i++) {
-        cout << pallets[i].id << endl;
-        cout << pallets[i].weight << endl;
-        cout << pallets[i].profit << endl;
+    cout << "[Integer Linear Programming Algorithm]" << endl;
+    cout << "Total Profit: " << totalProfit << endl;
+    cout << "Total Weight: " << totalWeight << endl;
+    cout << "Selected Pallets:";
+    for (const int index : selected) {
+        cout << " " << index + 1; // Increment index by 1 to start from 1
     }
-
-    cout << data.capacity << endl;
-    cout << data.n_pallets << endl;
-
-    int option;
-    cout << "Choose an algorithm:\n";
-    cout << "1 - Brute Force\n";
-    cout << "2 - Dynamic Programming\n";
-    cout << "3 - Greedy Approach\n";
-    cout << "4 - Integer Linear Programming\n";
-    cout << "Enter your choice: ";
-    cin >> option;
-
-    switch (option) {
-        case 1: {
-            bruteforce(data, pallets);
-            break;
-        }
-        case 2: {
-            dynamicProgramming(data, pallets);
-            break;
-        }
-        case 3: {
-            greedy(data, pallets);
-            break;
-        }
-        case 4: {
-            runILP(data, pallets);
-            break;
-        }
-        default:
-            cout << "Invalid option. Please run the program again and choose a valid option.\n";
-    }
-
-    return 0;
+    cout << endl;
 }

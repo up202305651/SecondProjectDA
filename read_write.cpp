@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "pallet.h"
 
 using namespace std;
 
@@ -32,11 +33,11 @@ void readOutputFile(int& totalProfit, int& totalWeight, vector<int>& selected) {
     size_t pos = 0;
     while ((pos = line.find(" ")) != string::npos) {
         int index = stoi(line.substr(0, pos));
-        selected.push_back(index+1);
+        selected.push_back(index);
         line.erase(0, pos + 1);
     }
     if (!line.empty()) {
         int index = stoi(line);
-        selected.push_back(index+1);
+        selected.push_back(index);
     }
 }
