@@ -91,3 +91,25 @@ void dynamicProgramming(Data& data, vector<Pallet>& pallets) {
     }
     cout << "\n\n";
 }
+
+int dynamicProgramming_benchmark(Data& data, vector<Pallet>& pallets) {
+    int n = data.n_pallets;
+    int W = data.capacity;
+
+    vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));
+
+    // Build the dp table
+    for (int i = 1; i <= n; i++) {
+        int wt = pallets[i - 1].weight;
+        int pf = pallets[i - 1].profit;
+        for (int w = 0; w <= W; ++w) {
+            if (wt > w) {
+                dp[i][w] = dp[i - 1][w];
+            } else {
+                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - wt] + pf);
+            }
+        }
+    }
+
+    return dp[n][W];
+}

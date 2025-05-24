@@ -68,19 +68,19 @@ include CMakeFiles/untitled1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/untitled1.dir/flags.make
 
-CMakeFiles/untitled1.dir/main.cpp.obj: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/main.cpp.obj: C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/main.cpp
-CMakeFiles/untitled1.dir/main.cpp.obj: CMakeFiles/untitled1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled1.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled1.dir/main.cpp.obj -MF CMakeFiles\untitled1.dir\main.cpp.obj.d -o CMakeFiles\untitled1.dir\main.cpp.obj -c C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\main.cpp
+CMakeFiles/untitled1.dir/runtime.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/runtime.cpp.obj: C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/runtime.cpp
+CMakeFiles/untitled1.dir/runtime.cpp.obj: CMakeFiles/untitled1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled1.dir/runtime.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled1.dir/runtime.cpp.obj -MF CMakeFiles\untitled1.dir\runtime.cpp.obj.d -o CMakeFiles\untitled1.dir\runtime.cpp.obj -c C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\runtime.cpp
 
-CMakeFiles/untitled1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\main.cpp > CMakeFiles\untitled1.dir\main.cpp.i
+CMakeFiles/untitled1.dir/runtime.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/runtime.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\runtime.cpp > CMakeFiles\untitled1.dir\runtime.cpp.i
 
-CMakeFiles/untitled1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\main.cpp -o CMakeFiles\untitled1.dir\main.cpp.s
+CMakeFiles/untitled1.dir/runtime.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/runtime.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dival\Documents\Universidade\2ANO\2_SEM\DA\SecondProject\SecondProjectDA\runtime.cpp -o CMakeFiles\untitled1.dir\runtime.cpp.s
 
 CMakeFiles/untitled1.dir/reader.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/reader.cpp.obj: C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/reader.cpp
@@ -168,7 +168,7 @@ CMakeFiles/untitled1.dir/ilp.cpp.s: cmake_force
 
 # Object files for target untitled1
 untitled1_OBJECTS = \
-"CMakeFiles/untitled1.dir/main.cpp.obj" \
+"CMakeFiles/untitled1.dir/runtime.cpp.obj" \
 "CMakeFiles/untitled1.dir/reader.cpp.obj" \
 "CMakeFiles/untitled1.dir/bruteforce.cpp.obj" \
 "CMakeFiles/untitled1.dir/greedy.cpp.obj" \
@@ -179,7 +179,7 @@ untitled1_OBJECTS = \
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
 
-untitled1.exe: CMakeFiles/untitled1.dir/main.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/runtime.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/reader.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/bruteforce.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/greedy.cpp.obj

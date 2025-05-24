@@ -21,6 +21,7 @@ using namespace std;
  */
 void greedy(Data& data, vector<Pallet>& pallets);
 
+int greedy_benchmark(Data& data, vector<Pallet>& pallets);
 /**
  * @brief Compara dois paletes com base na razão lucro/peso.
  *

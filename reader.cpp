@@ -28,9 +28,9 @@
  * @note Complexidade de Tempo: O(1), pois lê apenas duas linhas do arquivo.
  * @note Complexidade de Espaço: O(1), pois armazena apenas dois valores.
  */
-void readTruckFile(const std::string& filename, Data& data) {
+bool readTruckFile(const std::string& filename, Data& data) {
     std::ifstream file(filename);
-    if (!file.is_open())  return;
+    if (!file.is_open())  return false;
 
     std::string line;
     std::getline(file, line);
@@ -45,6 +45,7 @@ void readTruckFile(const std::string& filename, Data& data) {
     }
 
     file.close();
+    return true;
 }
 
 /**
@@ -58,11 +59,11 @@ void readTruckFile(const std::string& filename, Data& data) {
  * @note Complexidade de Tempo: O(n), onde n é o número de linhas no arquivo de paletes.
  * @note Complexidade de Espaço: O(n), onde n é o número de paletes.
  */
-void readPalletsFile(const std::string& filename, std::vector<Pallet>& pallets) {
+bool readPalletsFile(const std::string &filename, std::vector<Pallet> &pallets) {
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cout<<"Not opening";
-        return;
+        return false;
     }
 
     std::string line;
@@ -81,4 +82,5 @@ void readPalletsFile(const std::string& filename, std::vector<Pallet>& pallets) 
     }
 
     file.close();
+    return true;
 }

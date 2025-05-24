@@ -13,6 +13,6 @@
  * @param data Referência para a estrutura Data contendo a capacidade e o número de paletes.
  * @param pallets Referência para o vetor de Pallet contendo os dados dos paletes.
  */
-void runILP(const Data& data, const std::vector<Pallet>& pallets);
+void runILP();
 
 #endif // ILP_H

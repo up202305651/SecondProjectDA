@@ -27,4 +27,5 @@
 
 void dynamicProgramming(Data& data, std::vector<Pallet>& pallets);
 
+int dynamicProgramming_benchmark(Data& data, vector<Pallet>& pallets);
 #endif //DYNAMIC_PROG_H

@@ -1,15 +1,3 @@
-/**
- * @file main.cpp
- * @brief Função principal do programa para resolver o problema da mochila.
- *
- * Este arquivo contém a função principal que lê os dados dos paletes e do caminhão, exibe as informações lidas
- * e permite ao usuário escolher um algoritmo para resolver o problema da mochila. O programa oferece
- * quatro opções de algoritmos: Força Bruta, Programação Dinâmica, Abordagem Gulosa e Programação Linear Inteira.
- *
- * @note Complexidade de Tempo: Depende do algoritmo escolhido pelo usuário.
- * @note Complexidade de Espaço: Depende do algoritmo escolhido pelo usuário.
- */
-
 #include <iostream>
 #include <string>
 
@@ -23,14 +11,6 @@
 
 using namespace std;
 
-/**
- * @brief Função principal do programa.
- *
- * Esta função lê os dados dos paletes e do caminhão, exibe as informações lidas e permite ao usuário escolher
- * um algoritmo para resolver o problema da mochila.
- *
- * @return int Retorna 0 em caso de execução bem-sucedida.
- */
 int main() {
     vector<Pallet> pallets;
     Data data;
@@ -44,14 +24,26 @@ int main() {
         return 1;
     }
 
-    string palletsFilePath = "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/datasets-extra/datasets-extra/Pallets_0" + to_string(datasetOption) + ".csv";
-    string truckFilePath = "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/datasets-extra/datasets-extra/TruckAndPallets_0" + to_string(datasetOption) + ".csv";
+    string palletsFilePath;
+    string truckFilePath;
 
-    // Lê os dados dos paletes de um arquivo CSV
-    readPalletsFile(palletsFilePath, pallets);
+    if (datasetOption >= 1 && datasetOption <= 9) {
+        palletsFilePath = "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/datasets-extra/datasets-extra/Pallets_0" + to_string(datasetOption) + ".csv";
+        truckFilePath = "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/datasets-extra/datasets-extra/TruckAndPallets_0" + to_string(datasetOption) + ".csv";
+    } else {
+        palletsFilePath = "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/datasets-extra/datasets-extra/Pallets_" + to_string(datasetOption) + ".csv";
+        truckFilePath = "C:/Users/Dival/Documents/Universidade/2ANO/2_SEM/DA/SecondProject/SecondProjectDA/datasets-extra/datasets-extra/TruckAndPallets_" + to_string(datasetOption) + ".csv";
+    }
 
-    // Lê os dados do caminhão de um arquivo CSV
-    readTruckFile(truckFilePath, data);
+    if (!readPalletsFile(palletsFilePath, pallets)) {
+        cerr << "Error reading pallets file: " << palletsFilePath << endl;
+        return 1;
+    }
+
+    if (!readTruckFile(truckFilePath, data)) {
+        cerr << "Error reading truck file: " << truckFilePath << endl;
+        return 1; // Adiciona o valor de retorno
+    }
 
     int option;
     cout << "Choose an algorithm:\n";
@@ -77,7 +69,21 @@ int main() {
             break;
         }
         case 4: {
-            runILP(data, pallets);
+            createInputFile(data, pallets);
+
+            runILP();
+            int totalProfit, totalWeight;
+            vector<int> selected;
+            readOutputFile(totalProfit, totalWeight, selected);
+
+            cout << "[Integer Linear Programming Algorithm]" << endl;
+            cout << "Total Profit: " << totalProfit << endl;
+            cout << "Total Weight: " << totalWeight << endl;
+            cout << "Selected Pallets:";
+            for (const int index : selected) {
+                cout << " " << index + 1;
+            }
+            cout << endl;
             break;
         }
         default:

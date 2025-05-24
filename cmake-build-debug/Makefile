@@ -224,30 +224,6 @@ ilp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/ilp.cpp.s
 .PHONY : ilp.cpp.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 read_write.obj: read_write.cpp.obj
 .PHONY : read_write.obj
 
@@ -296,6 +272,30 @@ reader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/reader.cpp.s
 .PHONY : reader.cpp.s
 
+runtime.obj: runtime.cpp.obj
+.PHONY : runtime.obj
+
+# target to build an object file
+runtime.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/runtime.cpp.obj
+.PHONY : runtime.cpp.obj
+
+runtime.i: runtime.cpp.i
+.PHONY : runtime.i
+
+# target to preprocess a source file
+runtime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/runtime.cpp.i
+.PHONY : runtime.cpp.i
+
+runtime.s: runtime.cpp.s
+.PHONY : runtime.s
+
+# target to generate assembly for a file
+runtime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/runtime.cpp.s
+.PHONY : runtime.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -317,15 +317,15 @@ help:
 	@echo ... ilp.obj
 	@echo ... ilp.i
 	@echo ... ilp.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 	@echo ... read_write.obj
 	@echo ... read_write.i
 	@echo ... read_write.s
 	@echo ... reader.obj
 	@echo ... reader.i
 	@echo ... reader.s
+	@echo ... runtime.obj
+	@echo ... runtime.i
+	@echo ... runtime.s
 .PHONY : help
 
 

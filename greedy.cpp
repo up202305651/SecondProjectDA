@@ -72,3 +72,24 @@ void greedy(Data& data, std::vector<Pallet>& pallets) {
         cout << p.id << " ";
     cout << "\n\n";
 }
+
+
+int greedy_benchmark(Data& data, vector<Pallet>& pallets) {
+    // Criar uma cópia para não modificar o vetor original
+    vector<Pallet> pallets_copy = pallets;
+
+    // Ordenar pallets por maior profit/weight
+    sort(pallets_copy.begin(), pallets_copy.end(), compare_ratio);
+
+    int current_weight = 0;
+    int total_profit = 0;
+
+    for (const auto& pallet : pallets_copy) {
+        if (current_weight + pallet.weight <= data.capacity) {
+            current_weight += pallet.weight;
+            total_profit += pallet.profit;
+        }
+    }
+
+    return total_profit;
+}

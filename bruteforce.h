@@ -21,4 +21,5 @@ using namespace std;
  */
 void bruteforce(Data& data, vector<Pallet>& pallets);
 
+int bruteforce_benchmark(Data& data, vector<Pallet>& pallets);
 #endif //BRUTEFORCE_H

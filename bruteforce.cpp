@@ -33,11 +33,67 @@ using namespace std;
  *       principalmente para armazenar a solução atual e a melhor solução encontrada.
  */
 void bruteforce(Data& data, vector<Pallet>& pallets) {
-    vector<Pallet> solucao;
-    int n = pallets.size(); // mesma coisa que usar o parâmetro da data
+    if (pallets.size() <= 20) {
+        vector<Pallet> solucao;
+        auto n = pallets.size(); // mesma coisa que usar o parâmetro da data
+        int max_profit = 0;
+        int best_mask = 0;
+
+        for (int mask = 0; mask < (1 << n); ++mask) {
+            int cur_weight = 0;
+            int cur_profit = 0;
+
+            for (int i = 0; i < n; ++i) {
+                if (mask & (1 << i)) {
+                    cur_weight += pallets[i].weight;
+                    cur_profit += pallets[i].profit;
+                }
+            }
+            if (cur_weight <= data.capacity && cur_profit > max_profit) {
+                max_profit = cur_profit;
+                best_mask = mask;
+            }
+        }
+
+        // constrói a melhor solução
+        solucao.clear();
+        for (int i = 0; i < n; ++i) {
+            if (best_mask & (1 << i)) {
+                solucao.push_back(pallets[i]);
+            }
+        }
+
+        // output
+        int total_weight = 0;
+        for (const auto& p : solucao)
+            total_weight += p.weight;
+
+        cout << "Brute Force Algorithm\n";
+        cout << "Lucro total: " << max_profit << "\n";
+        cout << "Peso total: " << total_weight << "\n";
+        cout << "Pallets selecionados: ";
+        for (const auto& p : solucao)
+            cout << p.id << " ";
+        cout << "\n\n";
+    }
+    else {
+        cout << "Tempo de Execução mt longo";
+    }
+}
+
+/**
+ * @brief Versão silenciosa do brute force para medição precisa de tempo
+ */
+int bruteforce_benchmark(Data& data, vector<Pallet>& pallets) {
+    if (pallets.size() > 20) {
+        return -1; // Dataset muito grande
+    }
+
+    auto n = pallets.size();
     int max_profit = 0;
     int best_mask = 0;
 
+    // APENAS computação - sem prints
     for (int mask = 0; mask < (1 << n); ++mask) {
         int cur_weight = 0;
         int cur_profit = 0;
@@ -54,24 +110,5 @@ void bruteforce(Data& data, vector<Pallet>& pallets) {
         }
     }
 
-    // constrói a melhor solução
-    solucao.clear();
-    for (int i = 0; i < n; ++i) {
-        if (best_mask & (1 << i)) {
-            solucao.push_back(pallets[i]);
-        }
-    }
-
-    // output
-    int total_weight = 0;
-    for (const auto& p : solucao)
-        total_weight += p.weight;
-
-    cout << "Brute Force Algorithm\n";
-    cout << "Lucro total: " << max_profit << "\n";
-    cout << "Peso total: " << total_weight << "\n";
-    cout << "Pallets selecionados: ";
-    for (const auto& p : solucao)
-        cout << p.id << " ";
-    cout << "\n\n";
+    return max_profit;
 }
